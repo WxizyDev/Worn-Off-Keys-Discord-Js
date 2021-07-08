@@ -16,21 +16,22 @@ client.on('ready', () => {
     const embed = new Discord.MessageEmbed()
       .setTitle(`Server info for "${name}"`)
       .setThumbnail(icon)
+      .setColor('#fff')
       .addFields(
         {
-          name: 'Region',
-          value: region,
+          name: '🌐Region: ',
+          value: `The region of this server is: ${region}! `,
         },
         {
-          name: 'Members',
-          value: memberCount,
+          name: '👥Members: ',
+          value: `This server has a total of: ${memberCount}`,
         },
         {
-          name: 'Owner',
-          value: owner.user.tag,
+          name: '👑Owner: ',
+          value: `The server owner is: ${owner}!`,
         },
         {
-          name: 'AFK Timeout',
+          name: '🕐AFK Timeout: ',
           value: afkTimeout / 60,
         }
       )
